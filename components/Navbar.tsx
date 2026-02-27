@@ -34,7 +34,7 @@ export default function Navbar() {
           <img
             src="/images/brand/logo.png"
             alt="Overtime Pizzeria & Sports Pub"
-            className={`h-12 md:h-14 w-auto transition-all duration-500 ${scrolled ? '' : 'brightness-[2] drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]'}`}
+            className={`h-12 md:h-14 w-auto transition-all duration-500 ${scrolled ? '' : 'brightness-0 invert drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]'}`}
           />
         </Link>
 
