@@ -51,8 +51,9 @@ export default function HomePage() {
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
-        {/* Overlay — light at top for nav, heavier at bottom for CTAs */}
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-black/20 via-transparent via-60% to-brand-black" />
+        {/* Overlay — vignette effect for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-black/30 via-brand-black/20 via-60% to-brand-black" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(17,17,17,0.3)_0%,transparent_70%)]" />
 
         {/* Animated text + CTAs */}
         <HeroText />
