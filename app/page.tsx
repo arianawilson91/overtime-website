@@ -54,14 +54,16 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-brand-black/50" />
         <div className="absolute inset-0 bg-gradient-to-b from-brand-black/40 via-transparent to-brand-black/90" />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <div className="text-brand-red font-display tracking-[0.3em] text-sm mb-4 uppercase">Cape Coral, FL</div>
-          <h1 className="font-display text-6xl md:text-8xl text-white tracking-widest mb-4 leading-none">
-            Where Every<br />
-            <span className="text-brand-red">Game Night</span><br />
-            Is Legendary
+          <div className="text-white/50 font-display tracking-[0.3em] text-sm mb-6 uppercase">Cape Coral, FL</div>
+          <h1 className="font-display text-7xl md:text-9xl text-white tracking-widest mb-2 leading-none">
+            OVERTIME
           </h1>
-          <p className="text-white/70 text-lg md:text-xl mb-10 max-w-xl mx-auto font-sans font-normal">
-            Award-winning food, ice-cold drinks, and every game on our massive screens. Cape Coral&apos;s favorite sports pub.
+          <div className="font-display text-xl md:text-2xl text-brand-red tracking-[0.25em] uppercase mb-8">
+            Pizzeria &amp; Sports Pub
+          </div>
+          <p className="text-white/70 text-lg md:text-xl mb-10 max-w-lg mx-auto font-sans font-normal leading-relaxed">
+            Award-winning food. Ice-cold drinks.<br className="hidden md:block" />
+            Every game. Every screen.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/menu" className="btn-primary text-base px-10 py-4">View Our Menu</Link>
