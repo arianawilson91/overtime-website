@@ -41,9 +41,15 @@ const dailySpecials = [
 export default function SpecialsPage() {
   return (
     <div className="pt-20">
-      <section className="bg-brand-black py-16 px-4 text-center">
-        <h1 className="font-display text-5xl md:text-7xl text-white tracking-widest mb-4">Specials</h1>
-        <p className="text-white/60 max-w-xl mx-auto">Something great every day of the week. Plus Happy Hour Monday–Friday, 11am–5pm.</p>
+      <section className="relative py-24 px-4 text-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="/images/backgrounds/specials-back.jpg" alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-brand-black/80" />
+        </div>
+        <div className="relative z-10">
+          <h1 className="font-display text-5xl md:text-7xl text-white tracking-widest mb-4">Specials</h1>
+          <p className="text-white/60 max-w-xl mx-auto">Something great every day of the week. Plus Happy Hour Monday–Friday, 11am–5pm.</p>
+        </div>
       </section>
 
       {/* Happy Hour Banner */}
@@ -78,12 +84,36 @@ export default function SpecialsPage() {
         </div>
       </section>
 
-      <section className="bg-brand-black py-16 px-4 text-center">
-        <div className="section-title mb-4">Don&apos;t Miss Out</div>
-        <p className="text-white/60 mb-8">Follow us on social media for flash deals and event announcements.</p>
-        <div className="flex flex-wrap gap-4 justify-center">
-          <Link href="/events" className="btn-primary">Upcoming Events</Link>
-          <Link href="/menu" className="btn-secondary">Full Menu</Link>
+      {/* Featured food photos */}
+      <section className="bg-brand-black py-0">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
+          <div className="relative h-40 md:h-56 overflow-hidden">
+            <img src="/images/gallery/wings.jpg" alt="Wings" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+          </div>
+          <div className="relative h-40 md:h-56 overflow-hidden">
+            <img src="/images/food/meat-lovers-pizza.jpg" alt="Pizza" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+          </div>
+          <div className="relative h-40 md:h-56 overflow-hidden">
+            <img src="/images/gallery/bartender.jpg" alt="Bartender" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+          </div>
+          <div className="relative h-40 md:h-56 overflow-hidden">
+            <img src="/images/food/bbq-ribs.jpg" alt="Ribs" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+          </div>
+        </div>
+      </section>
+
+      <section className="relative py-20 px-4 text-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="/images/backgrounds/order-back.jpg" alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-brand-black/75" />
+        </div>
+        <div className="relative z-10">
+          <div className="section-title mb-4">Don&apos;t Miss Out</div>
+          <p className="text-white/60 mb-8">Follow us on social media for flash deals and event announcements.</p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link href="/events" className="btn-primary">Upcoming Events</Link>
+            <Link href="/menu" className="btn-secondary">Full Menu</Link>
+          </div>
         </div>
       </section>
     </div>

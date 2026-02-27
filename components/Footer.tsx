@@ -6,8 +6,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Brand */}
         <div>
-          <div className="font-display text-3xl text-brand-red tracking-widest mb-1">OVERTIME</div>
-          <div className="text-white/60 text-xs tracking-widest uppercase mb-4">Pizzeria &amp; Sports Pub</div>
+          <img src="/images/brand/logo.png" alt="Overtime Pizzeria & Sports Pub" className="h-16 w-auto mb-4" />
           <p className="text-white/50 text-sm leading-relaxed">Cape Coral&apos;s go-to sports bar for great food, cold drinks, and the big game.</p>
         </div>
 

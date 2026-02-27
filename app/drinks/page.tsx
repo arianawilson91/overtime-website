@@ -75,9 +75,34 @@ const drinkSections = [
 export default function DrinksPage() {
   return (
     <div className="pt-20">
-      <section className="bg-brand-black py-16 px-4 text-center">
-        <h1 className="font-display text-5xl md:text-7xl text-white tracking-widest mb-4">Drink Menu</h1>
-        <p className="text-white/60 max-w-xl mx-auto">Ice-cold drafts, handcrafted cocktails, and everything in between. Happy Hour Mon–Fri 11am–5pm.</p>
+      {/* Hero with background image */}
+      <section className="relative py-24 px-4 text-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="/images/backgrounds/drinks-back.jpg" alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-brand-black/80" />
+        </div>
+        <div className="relative z-10">
+          <h1 className="font-display text-5xl md:text-7xl text-white tracking-widest mb-4">Drink Menu</h1>
+          <p className="text-white/60 max-w-xl mx-auto">Ice-cold drafts, handcrafted cocktails, and everything in between. Happy Hour Mon–Fri 11am–5pm.</p>
+        </div>
+      </section>
+
+      {/* Featured drink photos strip */}
+      <section className="bg-brand-black py-0">
+        <div className="grid grid-cols-3 gap-0">
+          <div className="relative h-32 md:h-48 overflow-hidden">
+            <img src="/images/gallery/bartender.jpg" alt="Bartender" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-brand-black/20" />
+          </div>
+          <div className="relative h-32 md:h-48 overflow-hidden">
+            <img src="/images/gallery/bourbon-ale.jpg" alt="Bourbon ale" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-brand-black/20" />
+          </div>
+          <div className="relative h-32 md:h-48 overflow-hidden">
+            <img src="/images/gallery/touchdown-cocktail.jpg" alt="Cocktail" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-brand-black/20" />
+          </div>
+        </div>
       </section>
 
       {drinkSections.map((section, i) => (
@@ -96,10 +121,17 @@ export default function DrinksPage() {
         </section>
       ))}
 
-      <section className="bg-brand-black py-16 px-4 text-center">
-        <div className="section-title mb-4">Happy Hour</div>
-        <p className="text-white/60 text-lg mb-2">Monday – Friday, 11am – 5pm</p>
-        <p className="text-white/50">Wells &amp; Wines $5 &middot; Domestic Drafts $4</p>
+      {/* Happy Hour CTA */}
+      <section className="relative py-20 px-4 text-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="/images/backgrounds/reviews-back.jpg" alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-brand-black/80" />
+        </div>
+        <div className="relative z-10">
+          <div className="section-title mb-4">Happy Hour</div>
+          <p className="text-white/90 text-lg mb-2">Monday – Friday &middot; 11am – 5pm</p>
+          <p className="text-white/60">Wells &amp; Wines $5 &middot; Domestic Drafts $4</p>
+        </div>
       </section>
     </div>
   )

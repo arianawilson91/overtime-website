@@ -36,9 +36,15 @@ const events = [
 export default function EventsPage() {
   return (
     <div className="pt-20">
-      <section className="bg-brand-black py-16 px-4 text-center">
-        <h1 className="font-display text-5xl md:text-7xl text-white tracking-widest mb-4">Events</h1>
-        <p className="text-white/60 max-w-xl mx-auto">From game day to live music — there&apos;s always something happening at Overtime.</p>
+      <section className="relative py-24 px-4 text-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="/images/backgrounds/events-back.jpg" alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-brand-black/80" />
+        </div>
+        <div className="relative z-10">
+          <h1 className="font-display text-5xl md:text-7xl text-white tracking-widest mb-4">Events</h1>
+          <p className="text-white/60 max-w-xl mx-auto">From game day to live music — there&apos;s always something happening at Overtime.</p>
+        </div>
       </section>
 
       <section className="py-20 px-4 bg-brand-light-gray">
@@ -55,12 +61,36 @@ export default function EventsPage() {
         </div>
       </section>
 
-      <section className="bg-brand-black py-16 px-4 text-center">
-        <div className="section-title mb-4">Stay in the Loop</div>
-        <p className="text-white/60 mb-8">Follow us on Facebook and Instagram for event updates and announcements.</p>
-        <div className="flex flex-wrap gap-4 justify-center">
-          <a href="https://www.facebook.com/238258166185929" target="_blank" rel="noopener noreferrer" className="btn-primary">Facebook</a>
-          <a href="https://www.instagram.com/overtime_sportspub" target="_blank" rel="noopener noreferrer" className="btn-secondary">Instagram</a>
+      {/* Atmosphere photo strip */}
+      <section className="bg-brand-black py-0">
+        <div className="grid grid-cols-3 gap-0">
+          <div className="relative h-40 md:h-56 overflow-hidden">
+            <img src="/images/backgrounds/hero-slide-1.jpg" alt="Sports bar atmosphere" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-brand-black/20" />
+          </div>
+          <div className="relative h-40 md:h-56 overflow-hidden">
+            <img src="/images/backgrounds/hero-slide-2.jpg" alt="Game day" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-brand-black/20" />
+          </div>
+          <div className="relative h-40 md:h-56 overflow-hidden">
+            <img src="/images/gallery/bartender.jpg" alt="Bar scene" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-brand-black/20" />
+          </div>
+        </div>
+      </section>
+
+      <section className="relative py-20 px-4 text-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="/images/backgrounds/reviews-back.jpg" alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-brand-black/80" />
+        </div>
+        <div className="relative z-10">
+          <div className="section-title mb-4">Stay in the Loop</div>
+          <p className="text-white/60 mb-8">Follow us on Facebook and Instagram for event updates and announcements.</p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <a href="https://www.facebook.com/238258166185929" target="_blank" rel="noopener noreferrer" className="btn-primary">Facebook</a>
+            <a href="https://www.instagram.com/overtime_sportspub" target="_blank" rel="noopener noreferrer" className="btn-secondary">Instagram</a>
+          </div>
         </div>
       </section>
     </div>

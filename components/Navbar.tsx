@@ -31,8 +31,7 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
-          <span className="font-display text-2xl text-brand-red tracking-widest">OVERTIME</span>
-          <span className="block text-white text-[10px] tracking-[0.2em] uppercase -mt-1 font-sans">Pizzeria &amp; Sports Pub</span>
+          <img src="/images/brand/logo.png" alt="Overtime Pizzeria & Sports Pub" className="h-12 md:h-14 w-auto" />
         </Link>
 
         {/* Desktop Nav */}

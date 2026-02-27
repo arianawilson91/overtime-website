@@ -19,8 +19,12 @@ export default function ReviewCarousel() {
   const r = reviews[idx]
 
   return (
-    <section className="bg-brand-black py-20 px-4">
-      <div className="max-w-3xl mx-auto text-center">
+    <section className="relative py-20 px-4 overflow-hidden">
+      <div className="absolute inset-0">
+        <img src="/images/backgrounds/reviews-back.jpg" alt="" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-brand-black/85" />
+      </div>
+      <div className="relative z-10 max-w-3xl mx-auto text-center">
         <div className="section-title mb-10">What People Are Saying</div>
         <div className="relative min-h-[120px]">
           <p className="text-white/90 text-xl md:text-2xl italic leading-relaxed mb-6">&ldquo;{r.text}&rdquo;</p>
