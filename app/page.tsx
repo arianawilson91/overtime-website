@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import ReviewCarousel from '@/components/ReviewCarousel'
+import HeroText from '@/components/HeroText'
 
 const highlights = [
   { icon: '🏆', label: 'Best Sports Bar', sub: 'Cape Coral, Voted by Locals' },
@@ -53,23 +54,8 @@ export default function HomePage() {
         {/* Overlay — light at top for nav, heavier at bottom for CTAs */}
         <div className="absolute inset-0 bg-gradient-to-b from-brand-black/20 via-transparent via-60% to-brand-black" />
 
-        {/* CTAs pinned to lower third */}
-        <div className="absolute bottom-20 left-0 right-0 z-10 text-center px-4">
-          <div className="flex flex-wrap gap-4 justify-center mb-5">
-            <Link href="/menu" className="bg-brand-red text-white font-display tracking-[0.2em] uppercase px-10 py-4 text-base hover:bg-brand-red-dark transition-colors duration-200 shadow-lg shadow-brand-red/20">View Our Menu</Link>
-            <a
-              href="https://www.toasttab.com/local/order/overtime-pizzeria-and-sports-pub-1708-cape-coral-pkwy-w/r-049b8940-1fee-4a50-83ef-0a41c9145e41"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white/10 backdrop-blur-sm border border-white/30 text-white font-display tracking-[0.2em] uppercase px-10 py-4 text-base hover:bg-white/20 transition-colors duration-200"
-            >
-              Order Online
-            </a>
-          </div>
-          <p className="text-white/40 text-sm font-sans">
-            1708 Cape Coral Pkwy W &middot; (239) 541-3367 &middot; Open Daily 11am
-          </p>
-        </div>
+        {/* Animated text + CTAs */}
+        <HeroText />
       </section>
 
       {/* AWARDS STRIP */}
