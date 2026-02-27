@@ -3,9 +3,10 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
 const phrases = [
-  'Award-Winning Food',
-  'Ice-Cold Drinks',
-  'Every Game. Every Screen.',
+  { text: 'Overtime', sub: 'Pizzeria & Sports Pub' },
+  { text: 'Award-Winning Food' },
+  { text: 'Ice-Cold Drinks' },
+  { text: 'Every Game. Every Screen.' },
 ]
 
 export default function HeroText() {
@@ -29,11 +30,11 @@ export default function HeroText() {
   return (
     <div className="absolute bottom-20 left-0 right-0 z-10 text-center px-4">
       {/* Fading phrases */}
-      <div className="relative h-20 md:h-24 flex items-center justify-center mb-6">
-        {phrases.map((text, i) => (
-          <h2
-            key={text}
-            className={`absolute inset-x-0 font-display text-4xl md:text-6xl tracking-widest text-white transition-all duration-700 ${
+      <div className="relative h-24 md:h-32 flex items-center justify-center mb-6">
+        {phrases.map((phrase, i) => (
+          <div
+            key={phrase.text}
+            className={`absolute inset-x-0 transition-all duration-700 ${
               phase === i
                 ? 'opacity-100 translate-y-0'
                 : phase > i
@@ -41,8 +42,15 @@ export default function HeroText() {
                 : 'opacity-0 translate-y-4'
             }`}
           >
-            {text}
-          </h2>
+            <h2 className={`font-display tracking-widest text-white ${i === 0 ? 'text-5xl md:text-7xl' : 'text-4xl md:text-6xl'}`}>
+              {i === 0 ? <span className="text-brand-red">{phrase.text}</span> : phrase.text}
+            </h2>
+            {phrase.sub && (
+              <div className="font-display text-lg md:text-2xl text-white/70 tracking-[0.25em] uppercase mt-2">
+                {phrase.sub}
+              </div>
+            )}
+          </div>
         ))}
       </div>
 
