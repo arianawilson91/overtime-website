@@ -31,7 +31,11 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
-          <img src="/images/brand/logo.png" alt="Overtime Pizzeria & Sports Pub" className="h-12 md:h-14 w-auto" />
+          <img
+            src="/images/brand/logo.png"
+            alt="Overtime Pizzeria & Sports Pub"
+            className={`h-12 md:h-14 w-auto transition-all duration-500 ${scrolled ? '' : 'brightness-[2] drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]'}`}
+          />
         </Link>
 
         {/* Desktop Nav */}
