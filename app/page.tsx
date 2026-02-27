@@ -28,7 +28,19 @@ export default function HomePage() {
     <>
       {/* HERO */}
       <section className="relative min-h-screen flex items-center justify-center bg-brand-black overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-red/20 via-brand-black to-brand-black" />
+        {/* Background Video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-brand-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-black/40 via-transparent to-brand-black/80" />
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <div className="text-brand-red font-display tracking-[0.3em] text-sm mb-4 uppercase">Cape Coral, FL</div>
           <h1 className="font-display text-6xl md:text-8xl text-white tracking-widest mb-4 leading-none">
